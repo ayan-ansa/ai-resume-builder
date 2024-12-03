@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_experience_experiences",
+  "info": {
+    "displayName": "experience",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "role": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "workSummary": {
+      "type": "richtext"
+    }
+  }
+}
