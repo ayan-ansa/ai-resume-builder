@@ -27,7 +27,7 @@ function EditResume() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 md:px-10 px-2 md:mt-4 gap-4">
-      <FormSection setIsActiveNext={setIsActiveNext} />
+      <FormSection isActiveNext={isActiveNext} setIsActiveNext={setIsActiveNext} />
       <ResumePreview />
     </div>
   );

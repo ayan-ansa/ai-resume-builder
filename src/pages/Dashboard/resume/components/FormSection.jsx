@@ -10,11 +10,15 @@ import { ResumeListContext } from "@/context/ResumeListContext";
 import { Link, Navigate, useParams } from "react-router-dom";
 import ThemeColor from "../../components/ThemeColor";
 
-
-function FormSection({ setIsActiveNext }) {
+function FormSection({ isActiveNext, setIsActiveNext }) {
   const [page, setPage] = useState(1);
   const { resumeId } = useParams();
-  const { resumeData, setResumeData,isDark } = useContext(ResumeListContext);
+  const { resumeData, setResumeData, isDark } = useContext(ResumeListContext);
+
+  const setNextPage = () => {
+    setPage(page + 1);
+    setIsActiveNext(false);
+  };
 
   return (
     <div className="md:order-1 order-2">
@@ -25,7 +29,11 @@ function FormSection({ setIsActiveNext }) {
               <Home />
             </Button>
           </Link>
-          <ThemeColor resumeData={resumeData} setResumeData={setResumeData} isDark={isDark}/>
+          <ThemeColor
+            resumeData={resumeData}
+            setResumeData={setResumeData}
+            isDark={isDark}
+          />
         </div>
         <div className="space-x-2">
           {page > 1 && (
@@ -41,7 +49,8 @@ function FormSection({ setIsActiveNext }) {
           <Button
             size="sm"
             className="font-poppins"
-            onClick={() => setPage(page + 1)}
+            disabled={!isActiveNext}
+            onClick={setNextPage}
           >
             Next
             <ArrowRight />
