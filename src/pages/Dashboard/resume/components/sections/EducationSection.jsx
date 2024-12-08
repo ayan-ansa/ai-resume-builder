@@ -2,8 +2,11 @@ import { toChange } from "./ExperienceSection";
 
 function EducationSection({ education, themeColor }) {
   return (
-    <div className="border-y-2 py-4 my-3" style={{ borderColor: themeColor }}>
-      <h1 className="font-semibold mb-3 " style={{ color: themeColor }}>
+    <div className="border-y-2 py-4 my-3" style={{ borderColor: themeColor || "#8055A2" }}>
+      <h1
+        className="font-semibold mb-3 "
+        style={{ color: themeColor || "#8055A2" }}
+      >
         Education
       </h1>
       {education &&

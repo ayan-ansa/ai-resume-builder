@@ -9,7 +9,7 @@ function SkillSection({ skills, themeColor }) {
 
   return (
     <div>
-      <h1 className="font-semibold mb-3 " style={{ color: themeColor }}>
+      <h1 className="font-semibold mb-3 " style={{ color: themeColor || "#8055A2"}}>
         Technical Skills
       </h1>
       <div>

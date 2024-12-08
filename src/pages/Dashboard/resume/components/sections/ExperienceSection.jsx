@@ -9,7 +9,7 @@ export const toChange = (dateStr) => {
 function ExperienceSection({ experience, themeColor }) {
   return (
     <div>
-      <h1 className="font-semibold mb-3 " style={{ color: themeColor }}>
+      <h1 className="font-semibold mb-3 " style={{ color: themeColor || "#8055A2" }}>
         Work Experience
       </h1>
       {experience &&

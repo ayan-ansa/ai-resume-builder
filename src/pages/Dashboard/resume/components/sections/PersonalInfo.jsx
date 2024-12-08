@@ -16,7 +16,7 @@ function PersonalInfo({ resumeData }) {
     <div>
       <h1
         className="text-center text-2xl font-semibold"
-        style={{ color: themeColor }}
+        style={{ color: themeColor || "#8055A2" }}
       >
         {firstName + " " + lastName}
       </h1>
