@@ -19,7 +19,6 @@ const ViewResume = lazy(() =>
   import("./pages/Dashboard/resume/[resumeId]/ViewResume")
 );
 
-
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
