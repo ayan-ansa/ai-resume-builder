@@ -16,7 +16,7 @@ function EducationSection({ education, themeColor }) {
             idx
           ) => (
             <div key={idx} className="mb-1">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2">
                 <h1 className="font-medium">{universityName}</h1>
                 <h2 className="font-medium">
                   {`${startDate && toChange(startDate)} - ${

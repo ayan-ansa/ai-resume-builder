@@ -26,7 +26,7 @@ function EditResume() {
   }, [isActiveNext]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:px-10 px-2 md:mt-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl px-2 md:mt-4 mx-auto gap-4">
       <FormSection
         isActiveNext={isActiveNext}
         setIsActiveNext={setIsActiveNext}

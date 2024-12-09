@@ -16,7 +16,7 @@ function ExperienceSection({ experience, themeColor }) {
         experience.map(
           ({ company, role, startDate, endDate, workSummary }, idx) => (
             <div key={idx}>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2">
                 <h1 className="font-medium ">{role + ", " + company}</h1>
                 <h2 className="font-medium">
                   {`${startDate && toChange(startDate)} - ${
