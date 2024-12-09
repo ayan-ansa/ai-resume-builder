@@ -11,6 +11,7 @@ import { cardData } from "./../../data";
 import { ArrowRight, ChevronRight, Video } from "lucide-react";
 
 function Home() {
+  
   const { isDark } = useContext(ResumeListContext);
  
   return (
