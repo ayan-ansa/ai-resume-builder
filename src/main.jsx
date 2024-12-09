@@ -14,6 +14,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard/Dashboard"));
 const EditResume = lazy(() =>
   import("./pages/Dashboard/resume/[resumeId]/EditResume")
 );
+
 const ViewResume = lazy(() =>
   import("./pages/Dashboard/resume/[resumeId]/ViewResume")
 );
