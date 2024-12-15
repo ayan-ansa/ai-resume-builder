@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "displayName": "skills",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "language": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "string"
+    },
+    "database": {
+      "type": "string"
+    },
+    "tool": {
+      "type": "string"
+    }
+  }
+}
