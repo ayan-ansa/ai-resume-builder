@@ -32,7 +32,7 @@ function Header() {
   return (
     <div
       id="not-print"
-      className={`flex items-center justify-between py-3 px-3 sm:px-6 shadow-md `}
+      className="flex items-center justify-between py-3 px-3 sm:px-6 shadow-md"
     >
       <Link to={"/"}>
         <img src={logo} width={80} alt="logo" />

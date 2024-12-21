@@ -1,4 +1,5 @@
-import { FileText, MoreVertical } from "lucide-react";
+import { Loader2, MoreVertical } from "lucide-react";
+import cv from "./../../../assets/cv.png";
 import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
@@ -24,27 +25,30 @@ import { toast } from "react-toastify";
 function ResumeCard({ data, setIsCreated }) {
   const { documentId, title, jobTitle, themeColor } = data;
   const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
 
   const handleDeleteResume = async () => {
     try {
+      setLoading(true)
       const res = await deleteUserResume(documentId);
+      setLoading(false)
       toast.success("Deleted Successfully!");
       setIsCreated((prev) => !prev);
     } catch (error) {
       console.log(error);
+      setLoading(false)
     }
   };
 
   return (
     <div
-      className="rounded-t-md border-t-4 cursor-pointer hover:scale-105 transition-all"
+      className="rounded-t-md border-t-4 cursor-pointer hover:scale-105 transition duration-100 ease-in"
       style={{ borderColor: themeColor || "#228B22" }}
     >
       <Link to={"/dashboard/resume/" + documentId + "/edit"}>
-        <div className="bg-gradient-to-b flex items-center justify-center h-56 from-pink-100 via-purple-200 to-blue-200">
-          <FileText className="text-black" />
+        <div className="flex items-center justify-center h-56 bg-gradient-to-b from-pink-100 via-purple-200 to-blue-200">
+          <img src={cv} alt="cv" className="w-24" />
         </div>
       </Link>
       <div
@@ -109,7 +113,7 @@ function ResumeCard({ data, setIsCreated }) {
                 Cancel
               </AlertDialogCancel>
               <AlertDialogAction onClick={handleDeleteResume}>
-                Continue
+                {loading ? <Loader2 /> : "Continue"}
               </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>

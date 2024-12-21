@@ -1,4 +1,4 @@
-import { Loader2, PlusSquare } from "lucide-react";
+import { CirclePlus, Loader2} from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -48,10 +48,10 @@ function AddResume() {
   return (
     <div>
       <div
-        className="p-14 flex items-center justify-center rounded bg-secondary h-56 border border-dotted hover:scale-105 transition-all cursor-pointer"
+        className="p-14 flex items-center justify-center rounded bg-secondary h-56 border border-gray-400 hover:scale-105 transition-all cursor-pointer bg-gradient-to-b from-pink-100 via-purple-200 to-blue-200"
         onClick={() => setIsOpenDialog(true)}
       >
-        <PlusSquare className="text-black" />
+        <CirclePlus className="text-black" />
       </div>
       <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
         <DialogContent>

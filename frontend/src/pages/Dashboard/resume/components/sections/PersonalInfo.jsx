@@ -31,7 +31,7 @@ function PersonalInfo({ resumeData }) {
           LinkedIn
         </Link>
         <Link className="text-sm" to={phone}>
-          {phone}
+          {`+91 ${phone}`}
         </Link>
       </div>
     </div>
