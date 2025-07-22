@@ -23,7 +23,9 @@ function Dashboard() {
 
   return (
     <div className="p-10 md:px-20 lg:px-32">
-      <h2 className="media490:text-3xl media490:text-start text-center text-2xl font-semibold mb-1">My Resume</h2>
+      <h2 className="media490:text-3xl media490:text-start text-center text-2xl font-semibold mb-1">
+        My Resume
+      </h2>
       <p className="media490:text-start text-center">
         Start Creating AI resume to your next job role{" "}
       </p>

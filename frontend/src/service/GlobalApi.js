@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_STRAPI_API_KEY;
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const axiosClient = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL + "/api/",
+  baseURL: BASE_URL + "/api/",
   headers: {
     "Content-Type": "application/json",
     Authorization: `Bearer ${API_KEY}`,
@@ -17,7 +18,7 @@ export const updateResumeDetail = (id, data) =>
   axiosClient.put("/user-resumes/" + id, data);
 
 //for single user
-export const getUserResume = (id) =>
+export const getSingleUserResume = (id) =>
   axiosClient.get("/user-resumes/" + id + "?populate=*");
 
 //for all users

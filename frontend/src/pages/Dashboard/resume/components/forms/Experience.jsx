@@ -27,7 +27,7 @@ function Experience({ resumeData, setResumeData, setIsActiveNext,isDark }) {
       const data = {
         data: { experience: experienceList },
       };
-      const res = await updateResumeDetail(resumeId, data);
+      await updateResumeDetail(resumeId, data);
       toast.success("Details Updated Successfully");
       setLoading(false);
       setIsActiveNext(true);

@@ -24,7 +24,7 @@ function PersonalDetail({
       const data = {
         data: formData,
       };
-      const res = await updateResumeDetail(resumeId, data);
+      await updateResumeDetail(resumeId, data);
       toast.success("Details Updated Successfully");
       setLoading(false);
       setIsActiveNext(true);

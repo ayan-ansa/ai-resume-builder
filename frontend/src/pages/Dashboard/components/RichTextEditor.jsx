@@ -103,11 +103,11 @@ function RichTextEditor({
           <Toolbar>
             <BtnBold />
             <BtnItalic />
-            <BtnUnderline />
-            <BtnStrikeThrough />
+            <BtnUnderline/>
+            <BtnStrikeThrough/>
             <Separator />
             <BtnNumberedList />
-            <BtnBulletList />
+            <BtnBulletList/>
             <Separator />
             <BtnLink />
           </Toolbar>

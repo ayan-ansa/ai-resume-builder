@@ -3,7 +3,7 @@ import FormSection from "../components/FormSection";
 import ResumePreview from "../components/ResumePreview";
 import { ResumeListContext } from "@/context/ResumeListContext";
 import { useParams } from "react-router-dom";
-import { getUserResume } from "./../../../../service/GlobalApi";
+import { getSingleUserResume } from "./../../../../service/GlobalApi";
 import { resumeDetails } from "@/data";
 
 function EditResume() {
@@ -12,7 +12,7 @@ function EditResume() {
   const { resumeId } = useParams();
 
   const getResumeData = async () => {
-    const res = await getUserResume(resumeId);
+    const res = await getSingleUserResume(resumeId);
     const data = res.data.data;
     if (data.firstName && data.firstName) {
       setResumeData(data);

@@ -27,7 +27,7 @@ function Education({ resumeData, setResumeData, setIsActiveNext,isDark }) {
       const data = {
         data: { education: educationList },
       };
-      const res = await updateResumeDetail(resumeId, data);
+      await updateResumeDetail(resumeId, data);
 
       toast.success("Details Updated Successfully");
       setLoading(false);

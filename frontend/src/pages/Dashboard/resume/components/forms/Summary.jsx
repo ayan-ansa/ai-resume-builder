@@ -22,7 +22,7 @@ function Summary({ resumeData, setResumeData, setIsActiveNext,isDark }) {
       const data = {
         data: summary,
       };
-      const res = await updateResumeDetail(resumeId, data);
+      await updateResumeDetail(resumeId, data);
       toast.success("Details Updated Successfully");
       setIsActiveNext(true);
       setSaveLoading(false);
