@@ -6,10 +6,11 @@ import { updateResumeDetail } from "../../../../../service/GlobalApi";
 import { Loader2, Sparkles } from "lucide-react";
 import generateAIResponse from "@/config/gemini";
 import { toast } from "react-toastify";
-const PROMPT =
-  "Please generate summary in short for {position} resume give random experience year in 3 lines";
 
-function Summary({ resumeData, setResumeData, setIsActiveNext,isDark }) {
+const PROMPT = `Write a concise 3-line professional summary for a resume for the role of {position}.
+Include realistic experience years (1–3 years), highlight 2–3 key responsibilities, measurable impact, and important technical/soft skill`;
+
+function Summary({ resumeData, setResumeData, setIsActiveNext, isDark }) {
   const [summary, setSummary] = useState("");
   const [resLoading, setResLoading] = useState(false);
   const [saveLoading, setSaveLoading] = useState(false);
@@ -76,9 +77,11 @@ function Summary({ resumeData, setResumeData, setIsActiveNext,isDark }) {
   };
 
   return (
-    <div className={`p-5 rounded-lg border-t-pink-500 md:shadow-lg border-t-4 ${
-      isDark ? "md:shadow-slate-600" : ""
-    }`}>
+    <div
+      className={`p-5 rounded-lg border-t-pink-500 md:shadow-lg border-t-4 ${
+        isDark ? "md:shadow-slate-600" : ""
+      }`}
+    >
       <h1 className="font-bold text-lg">Summary</h1>
       <p>Add Summary for your job title</p>
       <form className="mt-6" onSubmit={handleSubmit}>
@@ -102,7 +105,7 @@ function Summary({ resumeData, setResumeData, setIsActiveNext,isDark }) {
         </div>
         <Textarea
           required
-           className="text-black my-3"
+          className="text-black my-3"
           value={resumeData.summary}
           onChange={handleChange}
         />

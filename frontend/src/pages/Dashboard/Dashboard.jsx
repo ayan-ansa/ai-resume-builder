@@ -27,7 +27,7 @@ function Dashboard() {
         My Resume
       </h2>
       <p className="media490:text-start text-center">
-        Start Creating AI resume to your next job role{" "}
+        Start Creating AI resume to your next job role
       </p>
       <div className="grid grid-cols-1 media490:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10">
         <AddResume />

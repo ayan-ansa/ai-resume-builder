@@ -31,7 +31,7 @@ function ResumeCard({ data, setIsCreated }) {
   const handleDeleteResume = async () => {
     try {
       setLoading(true)
-      const res = await deleteUserResume(documentId);
+      await deleteUserResume(documentId);
       setLoading(false)
       toast.success("Deleted Successfully!");
       setIsCreated((prev) => !prev);
